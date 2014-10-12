@@ -10,16 +10,16 @@ Home
       <div class="flexslider" id="mainslider">
         <ul class="slides">
           <li>
-            <img src="/store/img/bright.jpg" alt="" />
+            <img src="store/img/Bright.jpg" alt="" />
           </li>
           <li>
-            <img src="/store/img/blue.jpg" alt="" />
+            <img src="store/img/Blue.jpg" alt="" />
           </li>
           <li>
-            <img src="/store/img/bw.jpg" alt="" />
+            <img src="store/img/BW.jpg" alt="" />
           </li>
           <li>
-            <img src="/store/img/deep.jpg" alt="" />
+            <img src="store/img/Deep.jpg" alt="" />
           </li>
         </ul>
       </div>
