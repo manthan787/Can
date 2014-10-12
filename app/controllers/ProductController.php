@@ -39,14 +39,16 @@ class ProductController extends BaseController{
 					$img=Input::file('fimg');
 					
 					$filename=date('y-m-d-H:i:s').'-'.$img->getClientOriginalName();
-					Image::make($img->getRealPath())->resize(370,373)->save('public/products/'.$filename);
+					$path = public_path('products/' . $filename);
+					Image::make($img->getRealPath())->resize(370,373)->save($path);
 					$product->fimg='/products/'.$filename;
 				
 
 					if(Input::file('img2')){
 					$img2=Input::file('img2');
 					$filename=date('y-m-d-H:i:s').'-'.$img2->getClientOriginalName();
-					Image::make($img2->getRealPath())->resize(370,373)->save('public/products/'.$filename);
+					$path = public_path('products/' . $filename);
+					Image::make($img2->getRealPath())->resize(370,373)->save($path);
 					$product->img2='/products/'.$filename;
 					
 					}
