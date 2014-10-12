@@ -56,7 +56,8 @@ class ProductController extends BaseController{
 					if(Input::file('img3')){
 					$img3=Input::file('img3');
 					$filename=date('y-m-d-H:i:s').'-'.$img3->getClientOriginalName();
-					Image::make($img3->getRealPath())->resize(370,373)->save('public/products/'.$filename);
+					$path = public_path('products/' . $filename);
+					Image::make($img3->getRealPath())->resize(370,373)->save($path);
 					$product->img3='/products/'.$filename;
 					
 					}
