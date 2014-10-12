@@ -4,8 +4,7 @@ class OrderController extends BaseController{
 
 	public function __construct()
 	{
-		$user=User::find(1);
-		Auth::login($user);
+
 		$this->beforeFilter('admin');
 		$this->beforeFilter('csrf',['on'=>'post']);
 	}

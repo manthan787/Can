@@ -5,8 +5,6 @@ class ProductController extends BaseController{
 
 	public function __construct(){
 		//Auth::logout();
-		$user=User::find(1);
-		Auth::login($user);
 		$this->beforeFilter('admin');
 		$this->beforeFilter('csrf',['on'=>'post']);
 	}

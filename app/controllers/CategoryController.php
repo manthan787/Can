@@ -4,8 +4,6 @@
 class CategoryController extends BaseController{
 
 	public function __construct(){
-		$user=User::find(1);
-		Auth::login($user);
 		$this->beforeFilter('csrf',['on'=>'post']);
 		$this->beforeFilter('admin');
 	}
