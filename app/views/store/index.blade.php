@@ -42,7 +42,7 @@ Home
     <div class="otherddetailspart">
       <div class="innerclass shipping">
         <h2>24hrs Shipping</h2>
-        Free For UK Customers </div>
+        Free For Indian Customers </div>
     </div>
     <div class="otherddetailspart">
       <div class="innerclass choice">
