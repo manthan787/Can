@@ -143,6 +143,7 @@
                             <div class="productdiscrption"> {{ $product->description }}</div>
                             <div class="pricetag">
                               <span class="spiral"></span>
+                              @if($product->stock!=0)
                               {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
                               <button class="btn btn-orange">ADD TO CART</button>
                         
@@ -152,11 +153,13 @@
                                {{ Form::hidden('qty',1) }}
                               {{ Form::hidden('id',$product->id) }}
                               {{ Form::close() }}
-                            </div>
-                            <div class="shortlinks">
-                              <a class="details" href="#">DETAILS</a>
-                              <a class="wishlist" href="#">WISHLIST</a>
-                              <a class="compare" href="#">COMPARE</a>
+                              @else
+                              <button class="btn btn-info">OUT OF STOCK</button>
+                        
+                              <div class="price">
+                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                               </div>
+                              @endif   
                             </div>
                           </div>
                         </div>
