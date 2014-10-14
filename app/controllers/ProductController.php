@@ -33,6 +33,7 @@ class ProductController extends BaseController{
 					$product->description=Input::get('description');
 					$product->category_id=Input::get('category_id');
 					$product->price=Input::get('price');
+					$product->stock=Input::get('stock');
 					$product->availability=Input::get('availability');
 					
 

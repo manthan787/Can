@@ -76,22 +76,28 @@
                   </div>
 
               </div>
+              @if($product->stock!=0)
               {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
               <div class="quantitybox">
                 <label>Quantity</label>
-                <input type="text" name="qty">
+                <input type="text" name="qty" value="{{Input::old('qty')?Input::old('qty'):1}}">
                 @if($errors->has('qty'))
                 <p class="alert alert-info">{{ $errors->first('qty') }}</p>
                 @endif
     
               </div>
               <ul class="productpagecart" align="center">
-
+                
                 <li><button class="btn btn-orange btn-xl">ADD TO CART</a>
                 </li>
               </ul>
               {{ Form::hidden('id',$product->id) }}
               {{ Form::close() }}
+              @else
+              <ul class="productpagecart" align="center">
+                <li><button class="btn btn-danger btn-xl">OUT OF STOCK</button></li>
+              </ul>
+              @endif
          
         </div>
       </div>

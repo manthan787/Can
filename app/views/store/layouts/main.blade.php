@@ -43,13 +43,6 @@
             <div class="navbar" id="topnav">
               <div class="navbar-inner">
                 <ul class="nav" >
-                  <li><a class="home" href="/">Home</a>
-                  </li>
-                  @if(Auth::check())
-                  <li><a class="myaccount" href="/account/u/{{ Auth::user()->id }}">{{ Auth::user()->firstname }}</a>
-                  @else
-                  <li><a class="myaccount" href="/account/signin">Sign In</a>
-                  @endif
                   </li>
                   <li><a class="shoppingcart" href="/cart">Shopping Cart</a>
                   </li>
@@ -71,8 +64,33 @@
   </div>
   <div class="container">
     <div class="headerdetails">
-      <div class="pull-left">
-        
+      <div class="pull-right">
+      @if(Auth::check())
+        <ul class="nav language pull-left">
+          <li class="dropdown hover">
+            <a href="#" class="dropdown-toggle" data-toggle="">{{ Auth::user()->firstname }} <b class="caret"></b></a>
+            <ul class="dropdown-menu currency">
+              <li><a href="/account/u/{{ Auth::user()->id }}">My Account</a>
+                </li>
+                <li><a href="/account/signout">Sign Out</a>
+                </li>
+                <li><a href="/account/change-password">Change Password</a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      @else
+      <ul class="nav language pull-left">
+          <li class="dropdown hover">
+            <a href="/account/signin" class="dropdown-toggle" data-toggle="">Sign In <b class="caret"></b></a>
+            <ul class="dropdown-menu currency">
+                      <li><a href="/account/create">Create Account</a>
+                      </li>
+                      <li><a href="/account/recover">Recover Account</a></li>
+            </ul>
+          </li>
+        </ul>
+      @endif
       </div>
       @if(isset($c)&&$count!=0)
       <div class="pull-right">
@@ -150,43 +168,9 @@
               </ul>
             </div>
           </li>
-          <li><a href="blog.html">Blog</a>
-            <div>
-              <ul>
-                <li><a href="blog.html">Blog page</a>
-                </li>
-                <li><a href="bloglist.html">Blog List VIew</a>
-                </li>
-              </ul>
-            </div>
+          <li><a href="#">About Us</a>
           </li>
-          <li><a href="#">My Account</a>
-            <div>
-              <ul>
-                
-                @if(Auth::check())
-                <li><a href="/account/u/{{ Auth::user()->id }}">My Account</a>
-                </li>
-                <li><a href="/account/signout">Sign Out</a>
-                </li>
-                <li><a href="/account/change-password">Change Password</a>
-                </li>
-                
-                @else
-                <li><a href="/account/u/">My Account</a>
-                </li>
-                <li><a href="/account/signin">Sign In</a>
-                </li>
-                <li><a href="/account/create">Create Account</a>
-                </li>
-                <li><a href="/account/recover">Recover Account</a>
-                @endif
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">Features</a>
-          </li>
-          <li><a href="#">Contact</a>
+          <li><a href="#">Contact Us</a>
           </li>         
         </ul>
       </nav>

@@ -14,7 +14,19 @@ class Product extends Eloquent{
 		'fimg'=>'required|image|mimes:jpeg,jpg,png,gif',
 	    'img2'=>'image|mimes:jpeg,jpg,png,gif',
 	    'img3'=>'image|mimes:jpeg,jpg,png,gif',
+	    'stock'=>'numeric'
 	];
+
+	public function checkStock($qty){
+		if($qty>$this->stock)
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
+		}
+	}
 
 	public function category(){
 

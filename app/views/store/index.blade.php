@@ -10,16 +10,13 @@ Home
       <div class="flexslider" id="mainslider">
         <ul class="slides">
           <li>
-            <img src="store/img/Bright.jpg" alt="" />
+            <img src="store/img/Bright11.jpg" alt="" />
           </li>
           <li>
-            <img src="store/img/Blue.jpg" alt="" />
+            <img src="store/img/BW11.jpg" alt="" />
           </li>
           <li>
-            <img src="store/img/BW.jpg" alt="" />
-          </li>
-          <li>
-            <img src="store/img/Deep.jpg" alt="" />
+            <img src="store/img/Deep11.jpg" alt="" />
           </li>
         </ul>
       </div>
@@ -216,27 +213,6 @@ Home
       </ul>
     </div>
   </section>
-  
-  
-  
-  
-  
-  <!-- Newsletter Signup-->
-  <section id="newslettersignup" class="mt40">
-    <div class="container">
-      <div class="pull-left newsletter">
-        <h2> Newsletters Signup</h2>
-        Sign up to Our Newsletter & get attractive Offers by subscribing to our newsletters. </div>
-      <div class="pull-right">
-        <form class="form-horizontal">
-          <div class="input-prepend">
-            <input type="text" placeholder="Subscribe to Newsletter" id="inputIcon" class="input-xlarge">
-            <input value="Subscribe" class="btn btn-orange" type="submit">
-            Sign in           
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+
 
 @stop

@@ -136,6 +136,7 @@ ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 .thumbnails.list .productdiscrption { margin:10px 0 25px 0 }
 .thumbnails.list .thumbnail .shortlinks { display:block; width:auto; position:static; text-align:left; margin:10px 0 25px 0 }
 .thumbnails.list .pricetag { margin-left:-15px }
+.thumbnail .out {position:absolute; top:10px; left:-2px; background:url(../img/out.png) no-repeat 0 0; height:45px; width:68px; float:left; overflow:hidden; display:block; text-indent:9999px}
 .thumbnail .offer { position:absolute; top:10px; left:-2px; background:url(../img/offer.png) no-repeat 0 0; height:45px; width:68px; float:left; overflow:hidden; display:block; text-indent:9999px }
 .thumbnail .sale { position:absolute; top:10px; left:-2px; background:url(../img/sale.png) no-repeat 0 0; height:45px; width:68px; float:left; overflow:hidden; display:block; text-indent:9999px }
 .thumbnail .new { position:absolute; top:10px; left:-2px; background:url(../img/new.png) no-repeat 0 0; height:45px; width:68px; float:left; overflow:hidden; display:block; text-indent:9999px }

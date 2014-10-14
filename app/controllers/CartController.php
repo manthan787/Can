@@ -35,16 +35,21 @@ class CartController extends BaseController {
 				{
 					$order=Order::find(Session::get('cart'));
 				}
-				
-				
-				if($order->isUnique($id,$order->id,$qty)){
+				$product=Product::find($id);
+				if($product->checkStock($qty))
+				{
+					if($order->isUnique($id,$order->id,$qty)){
+						return Redirect::back()->with('success','Product Successfully Added To Your Cart.');
+					}
+					else{
+					$order->products()->attach($id,['qty'=>$qty]);
 					return Redirect::back()->with('success','Product Successfully Added To Your Cart.');
+					}
 				}
-				else{
-				$order->products()->attach($id,['qty'=>$qty]);
-				return Redirect::back()->with('success','Product Successfully Added To Your Cart.');
-			}
-		
+				else
+				{
+					return Redirect::back()->with('danger','Sorry! We have only '.$product->stock.' units of this product in stock right now.');
+				}
 		}
 		else{
 			return Redirect::back()->withErrors($validator)->with('danger','Whoops! You forgot something.');

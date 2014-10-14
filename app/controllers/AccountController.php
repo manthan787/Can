@@ -29,8 +29,7 @@ class AccountController extends BaseController{
 			$user->state_id=Input::get('state');
 			$user->PIN=Input::get('PIN');
 			$user->save();
-			Auth::login($user);
-		return Redirect::to('/')->with('success','Account Successfully created. You are now logged in. Shop Away!');	
+		return Redirect::to('/')->with('success','Account Successfully created. <b><a href="/account/signin">Log In!</a></b>');	
 		}
 		return Redirect::to('account/create')
 		->withErrors($v)
@@ -49,7 +48,21 @@ class AccountController extends BaseController{
 			$auth=Auth::attempt(['email'=>Input::get('email'),'password'=>Input::get('password')],TRUE);
 			if($auth)
 			{
-				return Redirect::to('/');
+				if(Session::has('cart'))
+					{
+						$order=Order::where('user_id',Auth::user()->id)->where('c',0)->where('abandoned',0)->first();
+						if(isset($order))
+						{
+							$order->abandoned=1;
+							$order->save();
+						}
+						$o=Order::find(Session::get('cart'));
+						$o->user_id=Auth::user()->id;
+						$o->save();
+						Session::forget('cart');
+						return Redirect::to('/');
+					}
+					return Redirect::to('/');
 			}
 			else
 			{
@@ -61,6 +74,7 @@ class AccountController extends BaseController{
 	}
 
 	public function getSignout(){
+
 		Auth::logout();
 		return Redirect::to('/');
 	}

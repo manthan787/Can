@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration {
 			$table->float('price');
 			$table->integer('category_id')->unsigned();
 			$table->boolean('availability')->default(1);
+			$table->integer('stock');
 			$table->string('fimg');
 			$table->string('img2');
 			$table->string('img3');

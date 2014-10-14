@@ -24,7 +24,7 @@ class CheckoutController extends BaseController{
 		}
 		else
 		{
-			return Redirect::to('/users/register');
+			return Redirect::to('/account/create');
 		}
 	}
 
@@ -38,7 +38,7 @@ class CheckoutController extends BaseController{
 				{
 					if(Session::has('cart'))
 					{
-						$order=Order::where('user_id',Auth::user()->id)->where('c',0)->first();
+						$order=Order::where('user_id',Auth::user()->id)->where('c',0)->where('abandoned',0)->first();
 						if(isset($order))
 						{
 							$order->abandoned=1;
