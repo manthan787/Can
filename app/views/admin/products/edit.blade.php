@@ -33,6 +33,12 @@ Edit {{ $product->title }}
 				 <p class="alert alert-danger">{{ $errors->first('price') }}</p>
 				 @endif
 				 <br>
+				 {{ Form::label('Stock','Stock') }}
+				 {{ Form::text('stock',Input::old('stock'),['class'=>'form-control round-form']) }}
+				 @if($errors->has('stock'))
+				 <p class="alert alert-danger">{{ $errors->first('stock') }}</p>
+				 @endif
+				 <br>
 				 {{ Form::label('category_id','Category') }}
 				 {{ Form::select('category_id',$categories,Input::old('category_id'),['class'=>'form-control']) }} 
 				 @if($errors->has('availability'))
