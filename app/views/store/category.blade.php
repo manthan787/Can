@@ -157,7 +157,7 @@
                               <button class="btn btn-info">OUT OF STOCK</button>
                         
                               <div class="price">
-                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                                Rs. {{ $product->price }}
                                </div>
                               @endif   
                             </div>
