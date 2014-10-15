@@ -17,16 +17,22 @@ class Order extends Eloquent{
 		return $this->belongsToMany('Product','order_product')->withPivot('qty');
 	}
 
-	public function isUnique($pid, $oid, $q){
-		$data=DB::table('order_product')->where('order_id',$oid)->where('product_id',$pid)->first();
-		
+	public function isUnique($pid,$q){
+		$data=DB::table('order_product')->where('order_id',$this->id)->where('product_id',$pid)->first();
+		$product=Product::find($pid);
 		if($data){
-			$qty=DB::table('order_product')->where('order_id',$oid)->where('product_id',$pid)->select('qty')->get();
+			$qty=DB::table('order_product')->where('order_id',$this->id)->where('product_id',$pid)->select('qty')->get();
 			if($qty){
 			$q=$q+$qty[0]->qty;	
-			}		
-			DB::table('order_product')->where('order_id',$oid)->where('product_id',$pid)->update(['qty'=>$q]);
-			return 1;
+			}	
+			if($product->checkStock($q))
+			{
+				DB::table('order_product')->where('order_id',$this->id)->where('product_id',$pid)->update(['qty'=>$q]);
+				return 1;
+			}
+			else{
+				return 2;
+			}
 		}
 		else{
 			return 0;
