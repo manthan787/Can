@@ -12,6 +12,11 @@ Route::controller('/cart','CartController');
 Route::controller('/checkout','CheckoutController');
 Route::get('/account/recover/{code}',['as'=>'account.recovery','uses'=>'AccountController@getRecovery']);
 Route::controller('/account','AccountController');
+Route::get('/refund-policy','StoreController@getRefundPolicy');
+Route::get('/replacement-policy','StoreController@getReplacementPolicy');
+Route::get('/delivery-shipping-policy','StoreController@getDeliveryPolicy');
+Route::get('/about','StoreController@getAbout');
+Route::get('/disclaimer','StoreController@getDisclaimer');
 /*
 Route::get('/orders',function(){
 	$p=Order::find(1);

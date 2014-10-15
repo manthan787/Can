@@ -30,4 +30,24 @@ class StoreController extends BaseController{
 			return Redirect::to('/');
 		}
 	}
+
+	public function getRefundPolicy(){
+		return View::make('store.refund');
+	}
+
+	public function getReplacementPolicy(){
+		return View::make('store.replacement');
+	}	
+
+	public function getDeliveryPolicy(){
+		return View::make('store.delivery');
+	}
+
+	public function getAbout(){
+		return View::make('store.about');
+	}
+
+	public function getDisclaimer(){
+		return View::make('store.disclaimer');
+	}
 }

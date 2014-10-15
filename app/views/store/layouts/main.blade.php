@@ -168,9 +168,9 @@
               </ul>
             </div>
           </li>
-          <li><a href="#">About Us</a>
+          <li><a href="/about">About Us</a>
           </li>
-          <li><a href="#">Contact Us</a>
+          <li><a href="/contact">Contact Us</a>
           </li>         
         </ul>
       </nav>
@@ -180,12 +180,18 @@
 <!-- Header End -->
 <div id="maincontainer">
 <div class="container">
-@if(Session::has('danger'))
-<p class="alert alert-danger">{{ Session::get('danger') }}</p>
-@endif
-@if(Session::has('success'))
-<p class="alert alert-success">{{ Session::get('success') }}</p>
-@endif
+    @if(Session::has('danger'))
+    <div class="errormsg alert">
+            <a class="clostalert">close</a>
+            <strong>{{ Session::get('danger') }}</strong> 
+    </div>
+    @endif
+    @if(Session::has('success'))
+    <div class="successmsg alert">
+            <a class="clostalert">close</a>
+            <strong>{{ Session::get('success') }}</strong> 
+    </div>
+    @endif
 </div> 
 @yield('content')
 </div>
@@ -198,10 +204,9 @@
       <div class="row">
         <div class="span3 aboutus">
           <h2>About Us </h2>
-          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
-            <br>
-            t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-        </div>
+          We are premium manufacturer and seller of decorative candles and candle holders. We always try to lighten and brighten your home as well as your life with our intriguing collection of products. We are one of the largest online stores for candles and related products. We have developed our online shopping store specifically for India and thus we offer wide range of variety of products for Indian customers.
+          <a href="/about">Read More...</a>
+          </div>
         <div class="span3 contact">
           <h2>Contact Us </h2>
           <ul>
@@ -228,13 +233,13 @@
     <div class="container">
       <div class="info">
         <ul>
-          <li><a href="#">Privacy Policy</a>
+          <li><a href="/refund-policy">Refund Policy</a>
           </li>
-          <li><a href="#">Terms &amp; Conditions</a>
+          <li><a href="/delivery-shipping-policy">Delivery and Shipping Policy</a>
           </li>
-          <li><a href="#">Affiliates</a>
+          <li><a href="/replacement-policy">Replacement Policy</a>
           </li>
-          <li><a href="#">Newsletter</a>
+          <li><a href="/disclaimer">Disclaimer</a>
           </li>
         </ul>
       </div>
