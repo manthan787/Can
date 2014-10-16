@@ -27,6 +27,7 @@ class CreateOrdersTable extends Migration {
 			$table->boolean('status')->default(0);
 			$table->boolean('c')->default(0);
 			$table->boolean('abandoned')->default(0);
+			$table->boolean('paymeth')->default(0);
 			$table->timestamps();
 		});
 	}

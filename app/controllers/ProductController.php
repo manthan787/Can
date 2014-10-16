@@ -39,7 +39,7 @@ class ProductController extends BaseController{
 					
 					$filename=date('y-m-d-H:i:s').'-'.$img->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img->getRealPath())->resize(370,373)->save($path);
+					Image::make($img->getRealPath())->save($path);
 					$product->fimg='/products/'.$filename;
 				
 
@@ -47,7 +47,7 @@ class ProductController extends BaseController{
 					$img2=Input::file('img2');
 					$filename=date('y-m-d-H:i:s').'-'.$img2->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img2->getRealPath())->resize(370,373)->save($path);
+					Image::make($img2->getRealPath())->save($path);
 					$product->img2='/products/'.$filename;
 					
 					}
@@ -56,7 +56,7 @@ class ProductController extends BaseController{
 					$img3=Input::file('img3');
 					$filename=date('y-m-d-H:i:s').'-'.$img3->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img3->getRealPath())->resize(370,373)->save($path);
+					Image::make($img3->getRealPath())->save($path);
 					$product->img3='/products/'.$filename;
 					
 					}
@@ -101,7 +101,7 @@ class ProductController extends BaseController{
 					if($img){
 					$filename=date('y-m-d-H:i:s').'-'.$img->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img->getRealPath())->resize(370,373)->save($path);
+					Image::make($img->getRealPath())->save($path);
 					$product->fimg='/products/'.$filename;
 					}
 
@@ -109,7 +109,7 @@ class ProductController extends BaseController{
 					$img2=Input::file('img2');
 					$filename=date('y-m-d-H:i:s').'-'.$img2->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img2->getRealPath())->resize(370,373)->save($path);
+					Image::make($img2->getRealPath())->save($path);
 					$product->img2='/products/'.$filename;
 					
 					}
@@ -118,7 +118,7 @@ class ProductController extends BaseController{
 					$img3=Input::file('img3');
 					$filename=date('y-m-d-H:i:s').'-'.$img3->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img3->getRealPath())->resize(370,373)->save($path);
+					Image::make($img3->getRealPath())->save($path);
 					$product->img3='/products/'.$filename;
 					
 					}
