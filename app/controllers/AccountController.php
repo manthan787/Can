@@ -160,7 +160,7 @@ class AccountController extends BaseController{
 
 			}
 			else{
-				return Redirect::to('/account/recover')->with('message','The Account Does NOT Exist!');
+				return Redirect::to('/account/recover')->with('danger','The Account Does NOT Exist!');
 			}
 		}
 	}
