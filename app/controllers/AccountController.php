@@ -115,10 +115,11 @@ class AccountController extends BaseController{
 		$user=User::where('id',$id)->first();
 		if($user)
 		{
-			return 'hi '.$user->firstname;
+			$orders=$user->getOrders();
+			return View::make('store.myaccount')->with('user',$user)->with('orders',$orders);
 		}
 		else{
-			return 'User Not Found!';
+			return Redirect::to('/')->with('danger','Invalid Request!The Account Does Not Exist.');
 		}
 	}
 

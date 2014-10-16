@@ -107,11 +107,17 @@
                   <tbody>
                   @foreach($c->products as $product)
                     <tr>
+                    {{ Form::open(['url'=>'/cart/delete','method'=>'post']) }}
+                        {{ Form::hidden('id',$product->id) }}
                       <td class="image"><a href="/product/{{ $product->pno }}"><img width="50" height="50" src="{{ $product->fimg }}" alt="product" title="product"></a></td>
                       <td class="name"><a href="/product/{{ $product->pno }}">{{ $product->title }}</a></td>
                       <td class="quantity">x&nbsp;{{ $product->pivot->qty }}</td>
                       <td class="total">Rs. {{ $product->price }}</td>
-                      <td class="remove"><i class="icon-remove"></i></td>
+                      <td class="remove">
+                        
+                        {{ Form::submit('X',['class'=>'btn btn-danger']) }}
+                        {{ Form::close() }}
+                    </td>
                     </tr>
                     @endforeach
                   </tbody>

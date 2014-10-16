@@ -63,7 +63,7 @@ class StoreController extends BaseController{
 			$m=Input::get('message');
 			Mail::send('emails.contact',['name'=>$name,'email'=>$email,'subject'=>$subject,'m'=>$m],function($message)
 				{
-					$message->to('manthant15@gmail.com','Manthan Thakar')->subject('Contact Us: New Message');
+					$message->to('candlestorein@gmail.com','CandleStore')->subject('Contact Us: New Message');
 				});
 			return Redirect::back()->with('success','We have recieved your message. We will respond to your message as soon as possible. Thank you for connecting with us.');
 		}
