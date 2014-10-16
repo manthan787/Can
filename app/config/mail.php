@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'manthant15@gmail.com', 'name' => 'manthant15'),
+	'from' => array('address' => 'candlestorein@gmail.com', 'name' => 'candlestore'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'manthant15@gmail.com',
+	'username' => 'candlestorein@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'Manthanwolfcamp15',
+	'password' => 'bhavik patel',
 
 	/*
 	|--------------------------------------------------------------------------
