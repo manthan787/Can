@@ -34,9 +34,6 @@ class ProductController extends BaseController{
 					$product->category_id=Input::get('category_id');
 					$product->price=Input::get('price');
 					$product->stock=Input::get('stock');
-					$product->availability=Input::get('availability');
-					
-
 					$img=Input::file('fimg');
 					
 					$filename=date('y-m-d-H:i:s').'-'.$img->getClientOriginalName();
@@ -89,17 +86,7 @@ class ProductController extends BaseController{
 
 	public function patchEdit($id){
 		
-		$validator=Validator::make(Input::all(), 
-		[
-		'pno'=>'required',
-		'title'=>'required',
-		'description'=>'required|min:10',
-		'price'=>'required',
-		'category_id'=>'required',
-		'fimg'=>'image|mimes:jpeg,jpg,png,gif',
-	    'img2'=>'image|mimes:jpeg,jpg,png,gif',
-	    'img3'=>'image|mimes:jpeg,jpg,png,gif',
-	]);
+		$validator=Validator::make(Input::all(), Product::$editrules);
 
 			if($validator->passes())
 			{
@@ -110,8 +97,6 @@ class ProductController extends BaseController{
 					$product->category_id=Input::get('category_id');
 					$product->price=Input::get('price');
 					$product->stock=Input::get('stock');
-					$product->availability=Input::get('availability');
-					
 
 					$img=Input::file('fimg');
 					if($img){

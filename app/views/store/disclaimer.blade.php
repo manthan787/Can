@@ -12,10 +12,10 @@ Delivery And Shipping Policy
           <a href="/">Home</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">Delivery And Shipping Policy</li>
+        <li class="active">Disclaimer</li>
       </ul>     
    
-      <h1 class="heading1"><span class="maintext">Delivery And Shipping Policy</span></h1>
+      <h1 class="heading1"><span class="maintext">Disclaimer</span></h1>
       <section id="typography"> 
       <font size="3">
       <p>

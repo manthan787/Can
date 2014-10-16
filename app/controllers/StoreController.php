@@ -1,6 +1,5 @@
 <?php 
 
-
 class StoreController extends BaseController{
 
 	public function getIndex(){
@@ -49,5 +48,28 @@ class StoreController extends BaseController{
 
 	public function getDisclaimer(){
 		return View::make('store.disclaimer');
+	}
+
+	public function getContact(){
+		return View::make('store.contact');
+	}
+
+	public function postContact(){
+		$v=Validator::make(Input::all(),['name'=>'required|min:3','email'=>'required|email','subject'=>'required|min:5','message'=>'required|min:10']);
+		if($v->passes()){
+			$name=Input::get('name');
+			$email=Input::get('email');
+			$subject=Input::get('subject');
+			$m=Input::get('message');
+			Mail::send('emails.contact',['name'=>$name,'email'=>$email,'subject'=>$subject,'m'=>$m],function($message)
+				{
+					$message->to('manthant15@gmail.com','Manthan Thakar')->subject('Contact Us: New Message');
+				});
+			return Redirect::back()->with('success','We have recieved your message. We will respond to your message as soon as possible. Thank you for connecting with us.');
+		}
+		else
+		{
+			return Redirect::back()->withInput()->withErrors($v);
+		}
 	}
 }

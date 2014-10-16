@@ -46,13 +46,6 @@ Add Product
 				 <p class="alert alert-danger">{{ $errors->first('availability') }}</p>
 				 @endif
 				 <br>
-				 
-				 {{ Form::label('availability','Availability') }}
-				 {{ Form::select('availability', ['1'=>'Available','2'=>'Out Of Stock'],null,['class'=>'form-control']) }} 
-				 @if($errors->has('availability'))
-				 <p class="alert alert-danger">{{ $errors->first('availability') }}</p>
-				 @endif
-				 <br>
 				 {{ Form::label('fimg', 'Front Image(Required)')}} 	
 				 {{ Form::file('fimg',['class'=>'form-control']) }} 
 				 @if($errors->has('fimg'))

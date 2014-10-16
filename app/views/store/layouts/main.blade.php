@@ -70,7 +70,11 @@
           <li class="dropdown hover">
             <a href="#" class="dropdown-toggle" data-toggle="">{{ Auth::user()->firstname }} <b class="caret"></b></a>
             <ul class="dropdown-menu currency">
-              <li><a href="/account/u/{{ Auth::user()->id }}">My Account</a>
+              @if(Auth::user()->admin)
+                <li><a href="/admin">Admin Panel</a>
+                </li>
+              @endif
+                <li><a href="/account/u/{{ Auth::user()->id }}">My Account</a>
                 </li>
                 <li><a href="/account/signout">Sign Out</a>
                 </li>

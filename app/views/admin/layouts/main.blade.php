@@ -48,7 +48,9 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="/">Go To Main Site</a></li>
                     <li><a class="logout" href="/account/signout">Logout</a></li>
+
             	</ul>
             </div>
         </header>

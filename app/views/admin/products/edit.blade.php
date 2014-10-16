@@ -45,13 +45,6 @@ Edit {{ $product->title }}
 				 <p class="alert alert-danger">{{ $errors->first('availability') }}</p>
 				 @endif
 				 <br>
-				 
-				 {{ Form::label('availability','Availability') }}
-				 {{ Form::select('availability', ['1'=>'Available','2'=>'Out Of Stock'],null,['class'=>'form-control']) }} 
-				 @if($errors->has('availability'))
-				 <p class="alert alert-danger">{{ $errors->first('availability') }}</p>
-				 @endif
-				 <br>
 				 {{ Form::label('fimg', 'Front Image(Required)')}}
 				 {{ HTML::image($product->fimg,null,['height'=>'50','width'=>'50']) }} <br> 	
 				 {{ Form::file('fimg',['class'=>'form-control']) }}
