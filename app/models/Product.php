@@ -19,7 +19,7 @@ class Product extends Eloquent{
 
 	public static $editrules=
 	[
-		'pno'=>'required|unique:products',
+		'pno'=>'required',
 		'title'=>'required',
 		'description'=>'required|min:10',
 		'price'=>'required',

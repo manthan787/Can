@@ -27,6 +27,7 @@ class ProductController extends BaseController{
 
 			if($validator->passes())
 			{
+					
 					$product=new Product;
 					$product->pno=Input::get('pno');
 					$product->title=Input::get('title');
@@ -85,9 +86,7 @@ class ProductController extends BaseController{
 	}
 
 	public function patchEdit($id){
-		
 		$validator=Validator::make(Input::all(), Product::$editrules);
-
 			if($validator->passes())
 			{
 					$product=Product::find($id);
