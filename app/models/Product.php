@@ -59,7 +59,7 @@ class Product extends Eloquent{
 	}
 
 	public function getRelated(){
-		$product=Product::where('category_id',$this->category_id)->take(4);
+		$product=Product::where('category_id',$this->category_id)->take(4)->get();
 		if($product->count()<4){
 			$product=Product::all()->random(4);
 		}
