@@ -61,7 +61,7 @@ Home
            
             <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}"></a>
             <div class="pricetag">
-              <span class="spiral">
+              <span class="spiral"></span>
               @if($product->stock!=0)
                               {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
                               
@@ -99,7 +99,7 @@ Home
           <div class="thumbnail">
             <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}"></a>
             <div class="pricetag">
-              <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+              <span class="spiral"></span>
              @if($product->stock!=0)
                               {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
                               
