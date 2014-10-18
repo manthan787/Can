@@ -67,7 +67,7 @@
               <h1 class="productname"><span class="bgnone">{{ $product->title }}</span></h1>
               <div class="productprice">
                 <div class="productpageprice">
-                  <span class="spiral"></span>Rs. {{ $product->price }}</div>
+                  <span class="spiral"></span>Rs. {{ round($product->price)}}</div>
     
               </div>
               <div class="row">
@@ -110,19 +110,29 @@
       <ul class="thumbnails">
       @foreach($rel as $r)
         <li class="span3">
-          <a class="prdocutname" href="product.html">{{ $r->title }}</a>
+          <a class="prdocutname" href="/product/{{ $r->pno }}">{{ $r->title }}</a>
           <div class="thumbnail">
-            <a href="#"><img alt="" src="img/product1.jpg"></a>
-            <div class="shortlinks">
-              <a class="details" href="#">DETAILS</a>
-              <a class="wishlist" href="#">WISHLIST</a>
-              <a class="compare" href="#">COMPARE</a>
-            </div>
+            <a href="/product/{{ $r->pno }}"><img alt="" src="{{ $r->fimg }}"></a>
             <div class="pricetag">
-              <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
-              <div class="price">
-                <div class="pricenew">Rs. {{ $r->price }}</div>
-              </div>
+              <span class="spiral"></span>
+              @if($product->stock!=0)
+                              {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
+                              
+                                <button class="btn btn-orange">ADD TO CART</button>
+                              
+                              <div class="price">
+                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
+                               </div>
+
+                              {{ Form::hidden('qty',1) }}
+                              {{ Form::hidden('id',$product->id) }}
+                              {{ Form::close() }}
+                            @else
+                                 <button class="btn btn-info">OUT OF STOCK</button>
+                                 <div class="price">
+                                    Rs. {{ round($product->price) }}
+                                 </div>
+                            @endif
             </div>
           </div>
         </li>

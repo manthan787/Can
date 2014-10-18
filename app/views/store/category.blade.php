@@ -32,52 +32,19 @@
              @endforeach
             </ul>
           </div>
-         <!--  Best Seller -->  
-          <div class="sidewidt">
-            <h2 class="heading2"><span>Best Seller</span></h2>
-            <ul class="bestseller">
-              <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Women Accessories</span>
-                <span class="price">$250</span>
-              </li>
-              <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Electronics</span>
-                <span class="price">$250</span>
-              </li>
-              <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Electronics</span>
-                <span class="price">$250</span>
-              </li>
-            </ul>
-          </div>
+         
           <!-- Latest Product -->  
           <div class="sidewidt">
             <h2 class="heading2"><span>Latest Products</span></h2>
             <ul class="bestseller">
+            @foreach($recent as $product)
               <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Women Accessories</span>
-                <span class="price">$250</span>
+                <img width="50" height="50" src="{{ $product->fimg }}" alt="product" title="product">
+                <a class="productname" href="/product/{{ $product->pno }}"> {{ $product->title }}</a>
+                <span class="procategory">{{ $product->category->name }}</span>
+                <span class="price">Rs. {{ round($product->price) }} </span>
               </li>
-              <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Electronics</span>
-                <span class="price">$250</span>
-              </li>
-              <li>
-                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                <a class="productname" href="product.html"> Product Name</a>
-                <span class="procategory">Electronics</span>
-                <span class="price">$250</span>
-              </li>
+            @endforeach
             </ul>
           </div>
           </aside>
@@ -113,7 +80,7 @@
                                 <button class="btn btn-orange">ADD TO CART</button>
                               
                               <div class="price">
-                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
                                </div>
 
                               {{ Form::hidden('qty',1) }}
@@ -122,7 +89,7 @@
                             @else
                                  <button class="btn btn-info">OUT OF STOCK</button>
                                  <div class="price">
-                                    Rs. {{ $product->price }}
+                                    Rs. {{ round($product->price) }}
                                  </div>
                             @endif
                             </div>
@@ -148,7 +115,7 @@
                               <button class="btn btn-orange">ADD TO CART</button>
                         
                               <div class="price">
-                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
                                </div>
                                {{ Form::hidden('qty',1) }}
                               {{ Form::hidden('id',$product->id) }}
@@ -157,7 +124,7 @@
                               <button class="btn btn-info">OUT OF STOCK</button>
                         
                               <div class="price">
-                                Rs. {{ $product->price }}
+                                Rs. {{ round($product->price) }}
                                </div>
                               @endif   
                             </div>

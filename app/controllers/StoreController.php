@@ -22,7 +22,7 @@ class StoreController extends BaseController{
 	public function getProduct($pno){
 		$product=Product::where('pno',$pno)->first();
 		if($product){
-			$rel=Product::take(4);
+			$rel=$product->getRelated();
 			return View::make('store.product')->with('product',$product)->with('rel',$rel);
 		}
 		else

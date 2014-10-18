@@ -55,4 +55,12 @@ class Product extends Eloquent{
 		$recent=Product::take(4)->orderBy('created_at','DESC')->get();
 		return $recent;
 	}
+
+	public function getRelated(){
+		$product=Product::where('category_id',$this->category_id)->take(4);
+		if($product->count()<4){
+			$product=Product::all()->random(4);
+		}
+		return $product;
+	}
 }
