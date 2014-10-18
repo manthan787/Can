@@ -45,13 +45,13 @@ class Product extends Eloquent{
 		return $this->belongsTo('Category');
 	}
 
-	public function getFeatured(){
+	public static function getFeatured(){
 		$featured=Product::all()->random(4);
 		return $featured;
 
 	}
 
-	public function getRecent(){
+	public static function getRecent(){
 		$recent=Product::take(4)->orderBy('created_at','DESC')->get();
 		return $recent;
 	}
