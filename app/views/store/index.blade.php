@@ -68,7 +68,7 @@ Home
                                 <button class="btn btn-orange">ADD TO CART</button>
                               
                               <div class="price">
-                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
                                </div>
 
                               {{ Form::hidden('qty',1) }}
@@ -77,7 +77,7 @@ Home
                             @else
                                  <button class="btn btn-info">OUT OF STOCK</button>
                                  <div class="price">
-                                    Rs. {{ $product->price }}
+                                    Rs. {{ round($product->price) }}
                                  </div>
                             @endif
             </div>
@@ -106,7 +106,7 @@ Home
                                 <button class="btn btn-orange">ADD TO CART</button>
                               
                               <div class="price">
-                                <div class="pricenew">Rs. {{ $product->price }}</div>
+                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
                                </div>
 
                               {{ Form::hidden('qty',1) }}
@@ -115,7 +115,7 @@ Home
                             @else
                                  <button class="btn btn-info">OUT OF STOCK</button>
                                  <div class="price">
-                                    Rs. {{ $product->price }}
+                                    Rs. {{ round($product->price) }}
                                  </div>
                             @endif
             </div>
