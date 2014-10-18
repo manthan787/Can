@@ -47,14 +47,14 @@ class Product extends Eloquent{
 
 	public static function getFeatured(){
 		$featured=Product::all()->random(4);
-		cache::put('feat',$featured,30);
+		Cache::put('feat',$featured,30);
 		return $featured;
 
 	}
 
 	public static function getRecent(){
 		$recent=Product::take(4)->orderBy('created_at','DESC')->get();
-		cache::put('recent',$recent,30);
+		Cache::put('recent',$recent,30);
 		return $recent;
 	}
 
