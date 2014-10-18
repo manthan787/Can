@@ -3,14 +3,28 @@
 class StoreController extends BaseController{
 
 	public function getIndex(){
-		$featured=Product::getFeatured();
-		$recent=Product::getRecent();
+		if(Cache::has('feat'))
+		{
+			$featured=Cache::get('feat');		
+		}
+		else
+		{
+			$featured=Product::getFeatured();
+		}
+		if(Cache::has('recent'))
+		{
+			$recent=Cache::get('recent');
+		}
+		else{
+			$recent=Product::getRecent();
+		}
 		return View::make('store.index')->with('featured',$featured)->with('recent',$recent);
 	}
 
 	public function getCategory($cat){
 		$cat=Category::where('name',$cat)->first();
 		if($cat){
+
 			$recent=Product::getRecent();
 			$products=Product::where('category_id',$cat->id)->get();
 			return View::make('store.category')->with('cat',$cat)->with('products',$products)->with('recent',$recent);
