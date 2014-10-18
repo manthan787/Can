@@ -3,8 +3,9 @@
 class StoreController extends BaseController{
 
 	public function getIndex(){
-
-		return View::make('store.index');
+		$featured=Product::getFeatured();
+		$recent=Product::getRecent();
+		return View::make('store.index')->with('featured',$featured)->with('recent',$recent);
 	}
 
 	public function getCategory($cat){

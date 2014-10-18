@@ -73,61 +73,7 @@ Home
             </div>
           </div>
         </li>
-        <li class="span3">
-          <a class="prdocutname" href="product.html">Product Name Here</a>
-          <div class="thumbnail">
-            <a href="#"><img alt="" src="store/img/product2.jpg"></a>
-            <div class="shortlinks">
-              <a class="details" href="#">DETAILS</a>
-              <a class="wishlist" href="#">WISHLIST</a>
-              <a class="compare" href="#">COMPARE</a>
-            </div>
-            <div class="pricetag">
-              <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
-              <div class="price">
-                <div class="pricenew">$4459.00</div>
-                <div class="priceold">$5000.00</div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="span3">
-          <a class="prdocutname" href="product.html">Product Name Here</a>
-          <div class="thumbnail">
-            <span class="offer tooltip-test" >Offer</span>
-            <a href="#"><img alt="" src="store/img/product1.jpg"></a>
-            <div class="shortlinks">
-              <a class="details" href="#">DETAILS</a>
-              <a class="wishlist" href="#">WISHLIST</a>
-              <a class="compare" href="#">COMPARE</a>
-            </div>
-            <div class="pricetag">
-              <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
-              <div class="price">
-                <div class="pricenew">$4459.00</div>
-                <div class="priceold">$5000.00</div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="span3">
-          <a class="prdocutname" href="product.html">Product Name Here</a>
-          <div class="thumbnail">
-            <a href="#"><img alt="" src="store/img/product2.jpg"></a>
-            <div class="shortlinks">
-              <a class="details" href="#">DETAILS</a>
-              <a class="wishlist" href="#">WISHLIST</a>
-              <a class="compare" href="#">COMPARE</a>
-            </div>
-            <div class="pricetag">
-              <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
-              <div class="price">
-                <div class="pricenew">$4459.00</div>
-                <div class="priceold">$5000.00</div>
-              </div>
-            </div>
-          </div>
-        </li>
+        
       </ul>
     </div>
   </section>
@@ -141,11 +87,6 @@ Home
           <a class="prdocutname" href="product.html">Product Name Here</a>
           <div class="thumbnail">
             <a href="#"><img alt="" src="store/img/product1a.jpg"></a>
-            <div class="shortlinks">
-              <a class="details" href="#">DETAILS</a>
-              <a class="wishlist" href="#">WISHLIST</a>
-              <a class="compare" href="#">COMPARE</a>
-            </div>
             <div class="pricetag">
               <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
               <div class="price">
