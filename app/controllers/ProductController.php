@@ -39,7 +39,7 @@ class ProductController extends BaseController{
 					
 					$filename=date('y-m-d-H:i:s').'-'.$img->getClientOriginalName();
 					$path = public_path('products/' . $filename);
-					Image::make($img->getRealPath())->orientate()->save($path);
+					Image::make($img->getRealPath())->save($path);
 					$product->fimg='/products/'.$filename;
 				
 

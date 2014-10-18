@@ -39,20 +39,20 @@
           <ul class="thumbnails mainimage">
             <li class="producthtumb">
               <a class="thumbnail" >
-                <img  src="{{ $product->fimg }}" alt="" title="">
+                <img  src="{{ $product->fimg }}" alt="" title="" style="height:67px;">
               </a>
             </li>
             @if($product->img2)
             <li class="producthtumb">
               <a class="thumbnail" >
-                <img  src="{{ $product->img2 }}" alt="" title="">
+                <img  src="{{ $product->img2 }}" alt="" title="" style="height:67px;">
               </a>
             </li>
             @endif
             @if($product->img3)
             <li class="producthtumb">
               <a class="thumbnail" >
-                <img  src="{{ $product->img3 }}" alt="" title="">
+                <img  src="{{ $product->img3 }}" alt="" title="" style="height:67px;">
               </a>
             </li>
             @endif
