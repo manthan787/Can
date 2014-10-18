@@ -14,7 +14,7 @@
           <ul class="thumbnails mainimage">
             <li class="span5">
               <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{{ $product->fimg }}">
-                <img src="{{ $product->fimg }}" alt="" title="">
+                <img src="{{ $product->fimg }}" alt="" title="" >
               </a>
             </li>
             @if($product->img2)

@@ -72,7 +72,7 @@ Contact Us
               <p> E/8, Brij Park-2, <br>Behind Manjalpur Township-1,<br>Manjalpur, Vadodara,<br>390011
                 <br>
                 Phone:+919998668728<br>
-                Email: test@contactus.com<br>
+                Email: candlestorein@gmail.com<br>
                 
               </p>
             </div>

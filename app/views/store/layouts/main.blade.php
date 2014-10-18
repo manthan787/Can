@@ -220,10 +220,10 @@
         <div class="span3 contact">
           <h2>Contact Us </h2>
           <ul>
-            <li class="phone"> +123 456 7890, +123 456 7890</li>
-            <li class="mobile"> +123 456 7890, +123 456 78900</li>
-            <li class="email"> test@test.com</li>
-            <li class="email"> test@test.com</li>
+            <li> E/8, Brij Park-2, <br>Behind Manjalpur Township-1,<br>Manjalpur, Vadodara,<br>390011</li>
+            <li class="mobile"> +919998668728</li>
+            <li class="email"> candlestorein@gmail.com</li>
+           
           </ul>
         </div>
         <div class="span3 twitter">
