@@ -11,8 +11,9 @@ class StoreController extends BaseController{
 	public function getCategory($cat){
 		$cat=Category::where('name',$cat)->first();
 		if($cat){
+			$recent=Product::getRecent();
 			$products=Product::where('category_id',$cat->id)->get();
-			return View::make('store.category')->with('cat',$cat)->with('products',$products);
+			return View::make('store.category')->with('cat',$cat)->with('products',$products)->with('recent',$recent);
 		}
 		else{
 		return Redirect::to('/');
