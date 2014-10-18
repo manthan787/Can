@@ -220,7 +220,7 @@
         <div class="span3 contact">
           <h2>Contact Us </h2>
           <ul>
-            <li> E/8, Brij Park-2, Behind Manjalpur Township-1,Manjalpur, Vadodara,390011</li>
+            
             <li class="mobile"> +919998668728</li>
             <li class="email"> candlestorein@gmail.com</li>
            
