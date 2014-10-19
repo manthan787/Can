@@ -44,7 +44,6 @@ Home
     <div class="otherddetailspart">
       <div class="innerclass choice">
         <h2>Order From Your Phone</h2>
-        Responsive Design
          </div>
     </div>
   </section>
