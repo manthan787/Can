@@ -43,7 +43,8 @@ Home
     </div>
     <div class="otherddetailspart">
       <div class="innerclass choice">
-        <h2>Order From Your Phone</h2>
+        <h2>Mobile Friendly</h2>
+        Order From Your Phone
          </div>
     </div>
   </section>
