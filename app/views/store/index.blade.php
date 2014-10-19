@@ -29,7 +29,7 @@ Home
     <div class="otherddetailspart">
       <div class="innerclass free">
         <h2>Free shipping</h2>
-        All over in world over $200 </div>
+        All over in India </div>
     </div>
     <div class="otherddetailspart">
       <div class="innerclass payment">
@@ -38,13 +38,13 @@ Home
     </div>
     <div class="otherddetailspart">
       <div class="innerclass shipping">
-        <h2>24hrs Shipping</h2>
+        <h2>Fast Shipping</h2>
         Free For Indian Customers </div>
     </div>
     <div class="otherddetailspart">
       <div class="innerclass choice">
-        <h2>Over 5000 Choice</h2>
-        50,000+ Products </div>
+        <h2>Quality Products</h2>
+         </div>
     </div>
   </section>
   <!-- Section End-->
