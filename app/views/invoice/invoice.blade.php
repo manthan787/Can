@@ -75,7 +75,7 @@ Manjalpur,<br> Vadodara,
         <tbody>
           @foreach($order->products as $product)
           <tr>
-            <td class="text-right"><img src="/var/www/CandleStore{{ $product->fimg }}" height="50" width="50"></td>
+            <td class="text-right"><img src="/var/www/CandleStore/public{{ $product->fimg }}" height="50" width="50"></td>
             <td align="center">{{ $product->pno }}</td>
             <td align="center">{{ $product->title }}</td>
             <td class="text-right" align="center">{{ $product->pivot->qty }}</td>
