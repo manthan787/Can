@@ -19,6 +19,7 @@ Route::get('/about','StoreController@getAbout');
 Route::get('/disclaimer','StoreController@getDisclaimer');
 Route::get('/contact','StoreController@getContact');
 Route::post('/contact','StoreController@postContact');
+Route::get('/i/{orderid}','InvoiceController@getIndex');
 
 /*
 Route::get('/orders',function(){

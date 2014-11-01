@@ -105,4 +105,22 @@ class CheckoutController extends BaseController{
 		->withInput();
 	}
 
+	public function getPayment(){
+		return	View::make('store.checkout.method');
+	}
+	public function postPayment(){
+		if(Auth::check()){
+				$order=Order::where('user_id',Auth::user()->id)->where('c',0)->where('abandoned',0)->first();
+			}
+			else if(Session::has('cart')){
+				$order=Order::find(Session::get('cart'));
+			}
+		if(Input::get('paymethod')=='COD'){
+			$order->paymeth=1;
+			$order->c=1;
+			$order->save();
+			Session::forget('cart');
+			return Redirect::to('/i/'.$order->id);
+		}
+	}
 }
