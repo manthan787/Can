@@ -18,6 +18,8 @@
         <div class="col-xs-6 text-right">
           
           <h1>Invoice</h1>
+          <h3>Order # {{ $order->id }}</h3>
+          <h3>Order Date: {{ $order->updated_at->format('d/m/Y') }}
         </div>
       </div>
       <div class="row">
@@ -30,8 +32,7 @@
               <p>
                E/8, Brij Park-2, 
 Behind Manjalpur Township-1,
-Manjalpur,<br> Vadodara,
-<br>390011 <br>Gujarat<br>+919998668728<b></b>
+Manjalpur, Vadodara, 390011, Gujarat </b>
               </p>
             </div>
           </div>
