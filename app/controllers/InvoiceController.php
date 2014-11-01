@@ -21,5 +21,7 @@ class InvoiceController extends BaseController{
     		$message->to($order->email);
     		$message->attach($pdfPath);
 		});
+
+		return Redirect::to('/')->with('success','Thank your for purchasing! You shall receive an email with the Invoice. ');
 	}	
 }
