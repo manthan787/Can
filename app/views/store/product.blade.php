@@ -65,6 +65,7 @@
           <div class="row">
             <div class="span7">
               <h1 class="productname"><span class="bgnone">{{ $product->title }}</span></h1>
+              <h5 class="productname"><a href="/category/{{ $product->category->name }}">{{ $product->category->name }}</a></h5>
               <div class="productprice">
                 <div class="productpageprice">
                   <span class="spiral"></span>Rs. {{ round($product->price)}}</div>
