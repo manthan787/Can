@@ -103,7 +103,7 @@
                       <div class="thumbnail">
                         <div class="row">
                           <div class="span3">
-                            <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}"></a>
+                            <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}" height="270px" width="180px"></a>
                           </div>
                           <div class="span6">
                             <a class="prdocutname" href="product.html">{{ $product->title }}</a>
