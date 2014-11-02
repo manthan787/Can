@@ -112,7 +112,7 @@
         <li class="span3">
           <a class="prdocutname" href="/product/{{ $r->pno }}">{{ $r->title }}</a>
           <div class="thumbnail">
-            <a href="/product/{{ $r->pno }}"><img alt="" src="{{ $r->fimg }}"></a>
+            <a href="/product/{{ $r->pno }}"><img alt="" src="{{ $r->fimg }}" style="height:180px;270px"></a>
             <div class="pricetag">
               <span class="spiral"></span>
               @if($product->stock!=0)

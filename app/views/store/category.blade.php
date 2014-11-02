@@ -71,7 +71,7 @@
                       <a class="prdocutname" href="/product/{{ $product->pno }}">{{ $product->title }}</a>
                       <div class="thumbnail">
          
-                        <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}"></a>
+                        <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}" style="height:180px;270px"></a>
                         <div class="pricetag">
                           <span class="spiral"></span>
                             @if($product->stock!=0)
@@ -103,7 +103,7 @@
                       <div class="thumbnail">
                         <div class="row">
                           <div class="span3">
-                            <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}" ></a>
+                            <a href="/product/{{ $product->pno }}"><img alt="" src="{{ $product->fimg }}" style="height:180px;270px" ></a>
                           </div>
                           <div class="span6">
                             <a class="prdocutname" href="product.html">{{ $product->title }}</a>
