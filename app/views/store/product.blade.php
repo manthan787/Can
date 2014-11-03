@@ -116,7 +116,7 @@
             <a href="/product/{{ $r->pno }}"><img alt="" src="{{ $r->fimg }}" style="height:180px;270px"></a>
             <div class="pricetag">
               <span class="spiral"></span>
-              @if($product->stock!=0)
+              @if($r->stock!=0)
                               {{ Form::open(['url'=>'/cart/add','method'=>'POST']) }}
                               
                                 <button class="btn btn-orange">ADD TO CART</button>
