@@ -254,13 +254,8 @@
         </ul>
       </div>
       <div id="footersocial">
-        <a href="#" title="Facebook" class="facebook">Facebook</a>
-        <a href="#" title="Twitter" class="twitter">Twitter</a>
-        <a href="#" title="Linkedin" class="linkedin">Linkedin</a>
-        <a href="#" title="rss" class="rss">rss</a>
-        <a href="#" title="Googleplus" class="googleplus">Googleplus</a>
-        <a href="#" title="Skype" class="skype">Skype</a>
-        <a href="#" title="Flickr" class="flickr">Flickr</a>
+        <a href={{ Config::get('candlestore.facebook') }} title="Facebook" class="facebook">Facebook</a>
+        <a href={{ Config::get('candlestore.twitter') }} title="Twitter" class="twitter">Twitter</a>
       </div>
     </div>
   </section>
