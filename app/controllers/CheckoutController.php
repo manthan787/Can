@@ -6,7 +6,19 @@ class CheckoutController extends BaseController{
 	public function getIndex()
 	{
 		
-			
+		if(Session::has('cart')&& !Auth::check())
+			{
+				$id=Session::get('cart');
+				$order=Order::where('id',$id)->where('c',0)->first();
+				
+				
+			}
+			elseif(Auth::check())
+			{
+				$order=Order::where('user_id',Auth::user()->id)->where('c',0)->where('abandoned',0)->first();
+
+			}
+		if($order->isExclusive())	
 			if(!Auth::check())
 			{
 				return View::make('store.checkout.index');
@@ -15,6 +27,9 @@ class CheckoutController extends BaseController{
 			{
 				return Redirect::to('/checkout/info');
 			}
+		else{
+			return Redirect::back()->with('danger','Sorry! One or more products in your cart have gone out of stock. Those product(s) can not be processed right now.');
+		}
 	}
 
 	public function postChoice(){

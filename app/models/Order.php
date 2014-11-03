@@ -80,5 +80,20 @@ class Order extends Eloquent{
 		return 1;
 	}
 
+	public function isExclusive(){
+		$c=0;
+		foreach($this->products as $product){
+			if($product->stock==0){
+				$this->products()->detach($product->id);
+				$c++;
+			}
+		}
+		if($c){
+			return 0;
+		}
+		else{
+			return 1;
+		}
+	}
 	
 }
