@@ -122,16 +122,16 @@
                                 <button class="btn btn-orange">ADD TO CART</button>
                               
                               <div class="price">
-                                <div class="pricenew">Rs. {{ round($product->price) }}</div>
+                                <div class="pricenew">Rs. {{ round($r->price) }}</div>
                                </div>
 
                               {{ Form::hidden('qty',1) }}
-                              {{ Form::hidden('id',$product->id) }}
+                              {{ Form::hidden('id',$r->id) }}
                               {{ Form::close() }}
                             @else
                                  <button class="btn btn-info">OUT OF STOCK</button>
                                  <div class="price">
-                                    Rs. {{ round($product->price) }}
+                                    Rs. {{ round($r->price) }}
                                  </div>
                             @endif
             </div>

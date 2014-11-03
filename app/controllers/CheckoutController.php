@@ -118,9 +118,22 @@ class CheckoutController extends BaseController{
 		if(Input::get('paymethod')=='COD'){
 			$order->paymeth=1;
 			$order->c=1;
-			$order->save();
-			Session::forget('cart');
-			return Redirect::to('/i/'.$order->id);
+			if($order->updateStock()){
+				if($order->save())
+				{
+				
+					Session::forget('cart');
+					return Redirect::to('/i/'.$order->id);
+				}
+				else
+				{	
+					return Redirect::to('/')->with('danger','Looks like something went wrong. Please Try Again!');
+				}
+			}
+			else{
+				return Redirect::to('/')->with('danger','Looks like something went wrong. Please Try Again!');
+			
+			}
 		}
 	}
 }

@@ -66,5 +66,19 @@ class Order extends Eloquent{
 		return 1;
 	}
 
+	public function updateStock()
+	{
+		
+		foreach($this->products as $product)
+		{
+			$product->stock=($product->stock) - ($product->pivot->qty);
+			if(!$product->save())
+			{
+				return 0;
+			}
+		}
+		return 1;
+	}
+
 	
 }
