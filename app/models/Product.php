@@ -45,7 +45,8 @@ class Product extends Eloquent{
 		return $this->belongsTo('Category');
 	}
 
-	public static function getFeatured(){
+	public static function getFeatured()
+	{
 		$featured=Product::all()->random(4);
 		Cache::put('feat',$featured,10000);
 		return $featured;

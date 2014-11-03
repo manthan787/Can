@@ -4,7 +4,7 @@ class StoreController extends BaseController{
 
 	public function getIndex(){
 		
-		$featured=Cache::has('feat') ? Cache::get('feat') : Product::getFeatured();
+		$featured=Product::getFeatured();
 		$recent=Cache::has('recent') ? Cache::get('recent') : Product::getRecent();
 		return View::make('store.index')->with('featured',$featured)->with('recent',$recent);
 	}
