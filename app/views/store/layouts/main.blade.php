@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <title>@yield('title') | CandleStore</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="CandleStore is India's largest online store for candles. India is a country of Festivals and Celebrations where people feel content in sharing warmth by exchanging gifts. Hence, candlestore serves the motive of Giving gifts as delightful as Receiving them.">
+<meta name="author" content="Manthan Thakar">
 {{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic') }}
 {{ HTML::style('http://fonts.googleapis.com/css?family=Crete+Round') }}
 {{ HTML::style('store/css/bootstrap.css') }}
@@ -236,16 +236,15 @@
            
           </ul>
         </div>
-        <div class="span3 twitter">
-          <h2>Twitter </h2>
-          <div id="twitter">
+        <div class="span3">
+          
+          <div id="">
+            <br><br><br><br>
+            {{ HTML::image('store/img/cod.png') }}
+            <p align="center">Powered By BlueDart</p>
           </div>
         </div>
-        <div class="span3 facebook">
-          <h2>Facebook </h2>
-          <div id="fb-root"></div>
-          
-        </div>
+        
       </div>
     </div>
   </section>

@@ -33,8 +33,8 @@ Home
     </div>
     <div class="otherddetailspart">
       <div class="innerclass payment">
-        <h2>Easy Payment</h2>
-        Payment Gatway support </div>
+        <h2>Cash On Delivery</h2>
+         Order Now Pay Later </div>
     </div>
     <div class="otherddetailspart">
       <div class="innerclass shipping">
