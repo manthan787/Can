@@ -19,6 +19,7 @@ class InvoiceController extends BaseController{
 		Mail::send('emails.pdf', ['firstname'=>$order->firstname], function($message) use ($pdfPath,$order){
     		$message->from('candlestorein@gmail.com', 'CandleStore Invoice');
     		$message->to($order->email);
+    		$message->subject('Order Summary');
     		$message->attach($pdfPath);
 		});
 
