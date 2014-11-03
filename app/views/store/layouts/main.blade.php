@@ -28,8 +28,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <!-- fav -->
-<link rel="icon" href="public/favicon.ico" type="image/x-icon"/>
-<link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon"/>
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>
 <!-- Header Start -->
