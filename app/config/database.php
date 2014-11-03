@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'CandleStore',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'manthan787',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
