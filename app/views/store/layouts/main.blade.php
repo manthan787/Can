@@ -28,7 +28,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <!-- fav -->
-<link rel="shortcut icon" href="assets/ico/favicon.html">
+
 </head>
 <body>
 <!-- Header Start -->
@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="span12">
-          <a href="/" class="logo pull-left"><h3>CandleStore</h3></a>
+          <a href="/" class="logo pull-left">{{ HTML::image('store/img/logo1.jpg') }}</a>
           <!-- Top Nav Start -->
           <div class="pull-left">
             <div class="navbar" id="topnav">
