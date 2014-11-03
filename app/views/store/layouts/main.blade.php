@@ -28,7 +28,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <!-- fav -->
-<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+<link rel='shortcut icon' type='image/x-icon' href="{{ URL::to('store/favicon.ico') }}" />
 </head>
 <body>
 <!-- Header Start -->
