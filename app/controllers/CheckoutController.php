@@ -18,17 +18,23 @@ class CheckoutController extends BaseController{
 				$order=Order::where('user_id',Auth::user()->id)->where('c',0)->where('abandoned',0)->first();
 
 			}
-		if($order->isExclusive())	
-			if(!Auth::check())
-			{
-				return View::make('store.checkout.index');
+		if(isset($order)){
+
+			if($order->isExclusive())
+			{	
+				if(!Auth::check())
+				{
+					return View::make('store.checkout.index');
+				}
+				else
+				{
+					return Redirect::to('/checkout/info');
+				}
 			}
-			else
-			{
-				return Redirect::to('/checkout/info');
-			}
-		else{
-			return Redirect::back()->with('danger','Sorry! One or more products in your cart have gone out of stock. Those product(s) can not be processed right now.');
+				else
+				{
+					return Redirect::back()->with('danger','Sorry! One or more products in your cart have gone out of stock. Those product(s) can not be processed right now.');
+				}
 		}
 	}
 
