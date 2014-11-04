@@ -36,6 +36,17 @@ class CheckoutController extends BaseController{
 					return Redirect::back()->with('danger','Sorry! One or more products in your cart have gone out of stock. Those product(s) can not be processed right now.');
 				}
 		}
+		else
+		{
+			if(!Auth::check())
+				{
+					return View::make('store.checkout.index');
+				}
+				else
+				{
+					return Redirect::to('/checkout/info');
+				}
+		}
 	}
 
 	public function postChoice(){
