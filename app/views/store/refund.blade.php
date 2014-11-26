@@ -18,7 +18,12 @@ Refund And Cancellation Policy
       <h1 class="heading1"><span class="maintext">Refund And Cancellation Policy</span></h1>
       <section id="typography"> 
       <p> <strong>    
-      	We follow 24 hours Cancellation Policy. <br>This policy states that any product ordered from our website can be cancelled within 24 hours from the time of order placed. <br>The amount of money paid will be refunded within 7 business days from the date of order placed.
+      <h3>How do you receive your refund through CandleStore?</h3>
+      <b>Candlestore shall refund payment by providing you Candlestore Cash for amounts less than Rs 1000. For amounts greater than Rs 1000, refunds will be made through either CandleStore Cash, cheque or bank transfer depending on the mode of payment used at the time of placing the order.</b><br>
+      <h3>What does it cover?</h3>
+      <b>You have paid for the product but didn't receive it
+      <br>
+      You have received a damaged/defective product or a product that does not comply with the specifications as per your original order	</b>
       </p>
       </section>
      </div>
