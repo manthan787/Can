@@ -258,7 +258,7 @@
           </li>
           <li><a href="/replacement-policy">Replacement Policy</a>
           </li>
-          <li><a href="/disclaimer">Disclaimer</a>
+          <li><a href="/disclaimer">Terms & Conditions</a>
           </li>
         </ul>
       </div>
