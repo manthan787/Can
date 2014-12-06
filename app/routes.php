@@ -17,6 +17,7 @@ Route::get('/replacement-policy','StoreController@getReplacementPolicy');
 Route::get('/delivery-shipping-policy','StoreController@getDeliveryPolicy');
 Route::get('/about','StoreController@getAbout');
 Route::get('/disclaimer','StoreController@getDisclaimer');
+Route::get('/privacy-policy','StoreController@getPrivacyPolicy');
 Route::get('/contact','StoreController@getContact');
 Route::post('/contact','StoreController@postContact');
 Route::get('/i/{orderid}','InvoiceController@getIndex');

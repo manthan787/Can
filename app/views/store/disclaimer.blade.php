@@ -65,6 +65,7 @@ Delivery And Shipping Policy
 
           issues beyond our control.
         </strong>
+        <h4>The www.candlestore.in is owned and operated By Shreeji Candles</h4>
       </p>
       </font>
       </section>

@@ -54,6 +54,10 @@ class StoreController extends BaseController{
 		return View::make('store.disclaimer');
 	}
 
+	public function getPrivacyPolicy(){
+		return View::make('store.privacy');
+	}
+
 	public function getContact(){
 		return View::make('store.contact');
 	}
