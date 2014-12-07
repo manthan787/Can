@@ -17,7 +17,7 @@ Refund And Cancellation Policy
    
       <h1 class="heading1"><span class="maintext">Refund And Cancellation Policy</span></h1>
       <section id="typography"> 
-      <p> 
+      <p> <b>
       <h3>When can you ask for refund?</h3>
       <b>Case I</b>
       <p>You can ask for refund if you don't receive the product within 10 working days from the date you placed the order.</p>
