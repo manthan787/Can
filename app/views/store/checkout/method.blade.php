@@ -32,7 +32,7 @@ Payment Method
                 <br>
                 <label class="inline">
                   <input type="radio" value="CARD" name="coption" disabled="">
-                  Card Payment (Coming Soon!) </label>
+                  Card Payment (Coming Soon!!!) </label>
                 <button  class="btn btn-orange">Confirm Order</button>
                 {{ Form::close() }}
               </div>
