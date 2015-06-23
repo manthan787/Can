@@ -49,8 +49,13 @@ class Product extends Eloquent{
 	{
 		if(!Cache::has('feat'))
 		{
-			$featured=Product::all()->random(4);
-			Cache::put('feat',$featured,10000);
+            if(count(Product::all())>4) {
+                $featured = Product::all()->random(4);
+                Cache::put('feat', $featured, 10000);
+            }
+            else {
+                return null;
+            }
 		}	
 		else{
 			$featured=Cache::get('feat');
