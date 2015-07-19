@@ -158,7 +158,7 @@ class CheckoutController extends BaseController{
 			if($result['status'] == 1)
 			{
 				return Redirect::to($result['data']);
-		}	}
+			}
 			
 			/*if($order->updateStock()){
 				if($order->save())
