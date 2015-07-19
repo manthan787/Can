@@ -21,6 +21,9 @@ Route::get('/privacy-policy','StoreController@getPrivacyPolicy');
 Route::get('/contact','StoreController@getContact');
 Route::post('/contact','StoreController@postContact');
 Route::get('/i/{orderid}','InvoiceController@getIndex');
+Route::get('/demo', function(){
+	return View::make('card');
+});
 
 /*
 Route::get('/orders',function(){

@@ -19,6 +19,7 @@ return array(
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_09_30_104550_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+    'InvoiceController' => $baseDir . '/app/controllers/InvoiceController.php',
     'Order' => $baseDir . '/app/models/Order.php',
     'OrderController' => $baseDir . '/app/controllers/OrderController.php',
     'Product' => $baseDir . '/app/models/Product.php',

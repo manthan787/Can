@@ -1,4 +1,5 @@
 <?php 
+require_once 'payu.php';
 
 class CheckoutController extends BaseController{
 	
@@ -147,10 +148,19 @@ class CheckoutController extends BaseController{
 			else if(Session::has('cart')){
 				$order=Order::find(Session::get('cart'));
 			}
-		if(Input::get('paymethod')=='COD'){
-			$order->paymeth=1;
-			$order->c=1;
-			if($order->updateStock()){
+		if(Input::get('coption')=='CARD') {
+			$payment = new Payment('nAm7IhGH', 'prod');
+			$params = array ('key' => 'xgRct3', 'txnid' => $order->id, 'amount' => $order->calculateTotal(),
+			'firstname' => $order->firstname, 'email' => $order->email, 'phone' => $order->phone,
+			'productinfo' => 'Candle Store Product!', 'surl' => 'payment_success', 'furl' => 'payment_failure');
+
+			$result = $payment->pay($params);
+			if($result['status'] == 1)
+			{
+				return Redirect::to($result['data']);
+		}	}
+			
+			/*if($order->updateStock()){
 				if($order->save())
 				{
 				
@@ -165,7 +175,9 @@ class CheckoutController extends BaseController{
 			else{
 				return Redirect::to('/')->with('danger','Looks like something went wrong. Please Try Again!');
 			
-			}
+			}*/
+
 		}
+		
 	}
 }

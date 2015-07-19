@@ -26,13 +26,10 @@ Payment Method
               <h3 class="heading3">Choose Your Payment Method </h3>
               <div class="loginbox">
               {{ Form::open(['url'=>'/checkout/payment','method'=>'post','class'=>'form-vertical']) }}
+              
                 <label class="inline">
-                  <input type="radio" value="COD" name="paymethod">
-                  Cash On Delivery </label>
-                <br>
-                <label class="inline">
-                  <input type="radio" value="CARD" name="coption" disabled="">
-                  Card Payment (Coming Soon!) </label>
+                  <input type="radio" value="CARD" name="coption">
+                  Card Payment </label>
                 <button  class="btn btn-orange">Confirm Order</button>
                 {{ Form::close() }}
               </div>
